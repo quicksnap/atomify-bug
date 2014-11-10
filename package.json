@@ -1,0 +1,43 @@
+{
+  "name": "f2h-admin",
+  "version": "0.0.1",
+  "description": "Prototype of F2H Admin",
+  "main": "src/index.js",
+  "scripts": {
+    "serve": "atomify"
+  },
+  "author": "",
+  "license": "MIT",
+  "atomify": {
+    "server": {
+      "lr": {
+        "sync": true
+      }
+    },
+    "js": {
+      "entry": "src/index.js",
+      "output": "bundle.js"
+    },
+    "css": {
+      "entry": "src/index.css",
+      "output": "bundle.css",
+      "plugins": [
+        [
+          "rework-plugin-inline",
+          "src/foo/bar/assets"
+        ],
+        "rework-default-unit"
+      ]
+    }
+  },
+  "devDependencies": {
+    "atomify": "^5.1.0",
+    "handlebars": "^1.3.0",
+    "hbsfy": "^1.3.2",
+    "resrcify": "^1.1.3"
+  },
+  "dependencies": {
+    "flux": "^2.0.1",
+    "react": "^0.12.0"
+  }
+}
